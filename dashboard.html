@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <style>
+    :root {
+      /* Dark, Google-ish */
+      --bg: #202124;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --card: #303134;
+      --card-hover: #3c4043;
+      --outline: #5f6368;
+      --shadow: 0 2px 10px rgba(0,0,0,.35);
+      --radius: 999px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: min(920px, 100%);
+      text-align: center;
+      padding-top: 6vh;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(38px, 5vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .quote {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      min-width: 190px;
+      border-radius: var(--radius);
+      background: var(--card);
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow);
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+      user-select: none;
+    }
+
+    a.btn:hover {
+      background: var(--card-hover);
+      border-color: rgba(255,255,255,.14);
+      transform: translateY(-1px);
+    }
+
+    a.btn:active { transform: translateY(0px); }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      border-radius: 6px;
+      background: rgba(232,234,237,.10);
+      border: 1px solid rgba(232,234,237,.12);
+    }
+
+    /* optional subtle footer hint */
+    .hint {
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      opacity: .9;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <h1>Dashboard</h1>
+    <p class="quote">“Small steps still count.”</p>
+
+    <div class="row">
+      <a class="btn" href="https://mail.google.com/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        Gmail
+      </a>
+
+      <a class="btn" href="https://drive.google.com/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        GDrive
+      </a>
+
+      <!-- Replace this with your exact Adobe Sign / Acrobat Sign URL if you have a preferred one -->
+      <a class="btn" href="https://acrobat.adobe.com/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        Sign
+      </a>
+
+      <!-- TaxWise is often not web-based; if you use a portal, paste that URL here -->
+      <a class="btn" href="https://twonline-25.taxwise.com/User/Login.aspx?ReturnUrl=%2F" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        25
+      </a>
+    </div>
+
+    <div class="hint">Tip: bookmark this file and set it as Chrome’s Homepage for instant access.</div>
+  </main>
+</body>
+</html>
